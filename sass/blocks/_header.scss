@@ -72,3 +72,51 @@ img {
     background-color: #000;
     color: #fff;
   }
+
+
+
+  @media only screen and (max-width: 800px) {
+    .burger-btn {
+      display: inline-block;
+      margin-left: 250px;
+      img{
+        background-color: transparent;
+      }
+    }
+    .navbar {
+      display: none;
+    }
+    .site-header__btn {
+      background-color: transparent;
+    }
+  }
+  .navbar--open {
+    position: absolute;
+    height: 100vh;
+    top: -450px;
+    right: 0px;
+    display: block;
+    flex-direction: column;
+    padding: 20px 20px 20px 20px;
+    animation: animate 1s ease forwards;
+    background-color: gray;
+  }
+  .navbar--open ol {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar--open ol li {
+    width: 100%;
+  }
+  .navbar--open ol li a {
+    width: 100%;
+  }
+  
+  @keyframes animate {
+    0% {
+      top: -450px;
+    }
+    100% {
+      top: 38px;
+    }
+  }
